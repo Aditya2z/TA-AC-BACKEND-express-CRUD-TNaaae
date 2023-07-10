@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single User</title>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+  </head>
+  <body>
+      <div class="title-container">
+        <h1>User Details</h1>
+        <div class="single-card card">
+          <h3>Name: <%= user.name %></h3>
+          <p>Email: <%= user.email %></p>
+          <p>Address: <%= user.address %></p>
+          <p>Bio: <%= user.bio %></p>
+          <p>hobbies: <%= user.hobbies %></p>
+          <a href="/users/<%= user.id %>/edit" class="btn-blue">Update User</a>
+          <a href="/users/<%= user.id %>/delete" class="btn-red">Delete User</a>
+          <a href="/users" class="btn-green">Back to Userlist</a>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
