@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User List</title>
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+  </head>
+  <body>
+    <div class="title-container">
+      <h1>User List</h1>
+      <a href="/users/new" class="btn-green">Create User</a>
+      <section class="card-holder">
+        <% list.forEach(function(user) { %>
+        <div class="card">
+            <h3>Name: <%= user.name %></h3>
+            <p>Age: <%= user.age %></p>
+            <p>Bio: <%= user.bio.substr(0, 30) + "..." %></p>
+            <a href="/users/<%= user.id %>" class="btn-green">User details</a>
+            <a href="/users/<%= user.id %>/delete" class="btn-red">Delete User</a>
+        </div>
+        <% }); %>
+      </section>
+    </div>
+  </body>
+</html>
