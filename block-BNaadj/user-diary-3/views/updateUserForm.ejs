@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Update Form</title>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body>
+    <form action="/users/<%= user.id %>/edit" method="post">
+        <input type="text" name="name" placeholder="Enter your name" value="<%= user.name %>">
+        <input type="email" name="email" placeholder="Enter your email" value="<%= user.email %>">
+        <input type="text" name="address" placeholder="Enter your address" value="<%= user.address %>">
+        <input type="number" name="age" placeholder="Enter your age" value="<%= user.age %>">
+        <textarea name="bio" id="" cols="30" rows="10" placeholder="Enter bio" value="<%= user.bio %>"></textarea>
+        <input type="text" name="hobbies" placeholder="[Enter your hobbies]" value="<%= user.hobbies %>">
+        <input type="submit" value="Update User" class="btn-blue">
+    </form>
+</body>
+</html>
